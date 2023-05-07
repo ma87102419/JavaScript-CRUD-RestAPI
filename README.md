@@ -18,16 +18,16 @@ You can make different HTTP requests to the server:
 
 ### Retrieve all employees
 
-send a GET request to the /employees endpoint
+send a `GET` request to the `/employees` endpoint
 
 ### Add a new employee
 
-send a POST request to the /employees endpoint with the employee data in the request body
+send a `POST` request to the `/employees` endpoint with the employee data in the request body
 
 ### Delete a employee
 
-send a DELETE request to the /employees/:name endpoint, where :name is the name of the employee to be deleted
+send a `DELETE` request to the `/employees/:name` endpoint, where :name is the name of the employee to be deleted
 
 ### Update an employee
 
-send a PUT request to the /employees endpoint with the updated employee data in the request body
+send a `PUT` request to the `/employees` endpoint with the updated employee data in the request body
