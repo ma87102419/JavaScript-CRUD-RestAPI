@@ -7,10 +7,11 @@ const app = express();
 // parse JSON data
 app.use(bodyParser.json());
 
-const port = 4000;
+const IP_ADDRESS = "0.0.0.0";
+const PORT = 3000;
 const pool = new Pool({
   user: "postgres",
-  host: "localhost",
+  host: "db",
   database: "employeedb",
   password: "12345",
   port: 5432,
@@ -105,6 +106,6 @@ app.put("/employees/:name", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}/employees`);
+app.listen(PORT, IP_ADDRESS, () => {
+  console.log(`Server listening on ${IP_ADDRESS}:${PORT}/employees`);
 });

@@ -6,13 +6,9 @@ Build the docker container and database while in this directory:
 
 `docker compose up -d`
 
-## Install dependencies
-
-`npm install`
-
 ## Start the application
 
-Run `node index.js` and the application is serverd at `http://localhost:4000/employees`
+The application is serverd at `http://localhost:3000/employees`
 
 You can make different HTTP requests to the server:
 
