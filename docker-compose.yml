@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: employeedb
+    volumes:
+      - ./init-employeedb.sql:/docker-entrypoint-initdb.d/init-employeedb.sql
+    ports:
+      - "5432:5432"
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      PGUSER: postgres
+      PGHOST: db
+      PGDATABASE: employeedb
+      PGPASSWORD: 12345
+      PGPORT: 5432
